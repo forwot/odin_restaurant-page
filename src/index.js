@@ -5,7 +5,7 @@ console.log("This Works!")
 //CONTENT DIV
 const contentContainer = document.querySelector('#content');
 
-// Home Page Content
+// HOME PAGE CONTENT
 const homeContainer = document.createElement('div');
 homeContainer.classList.add('home-container');
 
@@ -15,7 +15,7 @@ titleOne.textContent = "Random";
 
 const titleTwo = document.createElement('h1');
 titleTwo.classList.add('title-two')
-titleTwo.textContent = "Restaurant";
+titleTwo.textContent = "RESTAURANT";
 
 const hr = document.createElement('hr');
 
@@ -32,7 +32,7 @@ btnOne.classList.add('btn-one');
 const btnText = document.createElement('span')
 btnText.textContent = "View Menu";
 
-// APPENDS
+// HOME APPENDS
 btnOne.appendChild(btnText);
 box1.appendChild(btnOne);
 
@@ -42,4 +42,23 @@ homeContainer.appendChild(hr);
 homeContainer.appendChild(desc);
 homeContainer.appendChild(box1);
 
-contentContainer.appendChild(homeContainer);
+// contentContainer.appendChild(homeContainer);
+
+// ABOUT TAB CONTENT
+const aboutContainer = document.createElement('div');
+aboutContainer.classList.add('about-container');
+
+const aboutTitle = document.createElement('h1')
+aboutTitle.classList.add('title-two');
+aboutTitle.textContent = "ABOUT";
+
+const aboutDesc = document.createElement('p')
+aboutDesc.classList.add('about-desc');
+aboutDesc.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias mollitia omnis quibusdam quo sint ipsam velit soluta fuga, nulla officiis iusto, eum itaque consequuntur laboriosam sunt tempore dignissimos? Maxime, vel."
+
+aboutContainer.appendChild(titleOne);
+aboutContainer.appendChild(aboutTitle);
+aboutContainer.appendChild(hr);
+aboutContainer.appendChild(aboutDesc);
+
+// contentContainer.appendChild(aboutContainer);
