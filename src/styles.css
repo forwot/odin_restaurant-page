@@ -3,7 +3,7 @@
 }
 
 
-body{
+#content{
     margin: 0;
     height: 100vh;
     display: grid;
@@ -33,11 +33,7 @@ li:hover,
 .btn-one{
     cursor: pointer;
 }
-#content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+
 
 /* HOME PAGE STYLING */
 hr{
@@ -45,7 +41,7 @@ hr{
     border: 2px solid black;
     margin: 24px;
 }
-.home-container{
+main{
     display: flex;
     flex-direction: column;
     align-items: center;
