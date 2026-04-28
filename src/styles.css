@@ -10,7 +10,6 @@ body{
     background-color: grey;
     color: white;
 }
-
 nav,
 footer{
     display: flex;
@@ -28,14 +27,13 @@ ul{
     font-size: 30px;
     padding: 0;
 }
-
 #content{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-
+/* HOME PAGE STYLING */
 hr{
     width: 260px;
     border: 2px solid black;
@@ -67,7 +65,6 @@ hr{
 .desc{
     font-size: 26px;
 }
-
 /* Button Styling */
 .btn-one {
     color: #FFF;
@@ -121,3 +118,4 @@ hr{
     transform: scale(0.1, 1);
   }
   
+  /* MENU PAGE STYLING */
