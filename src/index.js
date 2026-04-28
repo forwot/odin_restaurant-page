@@ -2,6 +2,11 @@ import "./styles.css"
 
 console.log("This Works!")
 
+// NAV DOMs
+const homeNav = document.querySelector('#home');
+const menuNav = document.querySelector('#menu');
+const aboutNav = document.querySelector('#about');
+
 //CONTENT DIV
 const contentContainer = document.querySelector('#content');
 
@@ -17,7 +22,7 @@ const titleTwo = document.createElement('h1');
 titleTwo.classList.add('title-two')
 titleTwo.textContent = "RESTAURANT";
 
-const hr = document.createElement('hr');
+const homeHR = document.createElement('hr');
 
 const desc = document.createElement('p');
 desc.classList.add('desc');
@@ -38,27 +43,50 @@ box1.appendChild(btnOne);
 
 homeContainer.appendChild(titleOne);
 homeContainer.appendChild(titleTwo);
-homeContainer.appendChild(hr);
+homeContainer.appendChild(homeHR);
 homeContainer.appendChild(desc);
 homeContainer.appendChild(box1);
 
-// contentContainer.appendChild(homeContainer);
+contentContainer.appendChild(homeContainer);
 
 // ABOUT TAB CONTENT
 const aboutContainer = document.createElement('div');
 aboutContainer.classList.add('about-container');
 
-const aboutTitle = document.createElement('h1')
-aboutTitle.classList.add('title-two');
-aboutTitle.textContent = "ABOUT";
+const aboutTitleOne = document.createElement('p');
+aboutTitleOne.classList.add('title-one');
+aboutTitleOne.textContent = "Random";
+
+const aboutTitleTwo = document.createElement('h1');
+aboutTitleTwo.classList.add('title-two');
+aboutTitleTwo.textContent = "ABOUT";
+
+const aboutHR = document.createElement('hr');
 
 const aboutDesc = document.createElement('p')
 aboutDesc.classList.add('about-desc');
-aboutDesc.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias mollitia omnis quibusdam quo sint ipsam velit soluta fuga, nulla officiis iusto, eum itaque consequuntur laboriosam sunt tempore dignissimos? Maxime, vel."
+aboutDesc.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias mollitia omnis quibusdam quo sint ipsam velit soluta fuga, nulla officiis iusto, eum itaque consequuntur laboriosam sunt tempore dignissimos? Maxime, vel.";
 
-aboutContainer.appendChild(titleOne);
-aboutContainer.appendChild(aboutTitle);
-aboutContainer.appendChild(hr);
+aboutContainer.appendChild(aboutTitleOne);
+aboutContainer.appendChild(aboutTitleTwo);
+aboutContainer.appendChild(aboutHR);
 aboutContainer.appendChild(aboutDesc);
 
 // contentContainer.appendChild(aboutContainer);
+
+// EVENT LISTENERS
+// menu button 
+box1.addEventListener("click", ()=>{
+    contentContainer.replaceChildren();
+    contentContainer.appendChild(aboutContainer);//change to menu later
+})
+
+homeNav.addEventListener("click", ()=>{
+    contentContainer.replaceChildren();
+    contentContainer.appendChild(homeContainer);
+})
+
+aboutNav.addEventListener("click", ()=>{
+    contentContainer.replaceChildren();
+    contentContainer.appendChild(aboutContainer);
+})
