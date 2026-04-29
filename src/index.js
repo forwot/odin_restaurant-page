@@ -1,5 +1,6 @@
 import "./styles.css"
 import { renderHome } from "./home.js";
+import { renderMenu } from "./menu.js";
 import { renderAbout } from "./about.js";
 
 function createHtmlElement(type, id, arrayClasses, content){
@@ -20,17 +21,23 @@ const contentContainer = document.querySelector('#content');
 export { createHtmlElement, contentContainer };
 
 // Running the Page
-// renderHome();
+renderHome();
 
 // NavBar BTNS
-const homeNav = document.querySelector('#home')
+const homeNav = document.querySelector('#home');
 homeNav.addEventListener("click", ()=>{
     contentContainer.replaceChildren();
     renderHome();
 })
 
-const aboutNav = document.querySelector('#about')
+const aboutNav = document.querySelector('#about');
 aboutNav.addEventListener("click", ()=>{
     contentContainer.replaceChildren();
     renderAbout();
+})
+
+const menuNav = document.querySelector('#menu');
+menuNav.addEventListener("click", ()=>{
+    contentContainer.replaceChildren();
+    renderMenu();
 })

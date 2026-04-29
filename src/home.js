@@ -1,5 +1,6 @@
 import { createHtmlElement, contentContainer } from "./index.js";
 import { renderAbout } from "./about.js";
+import { renderMenu } from "./menu.js";
 
 function render() {
     const main = createHtmlElement('main');
@@ -20,7 +21,7 @@ function render() {
     // MENU BTN 
     box1.addEventListener("click", ()=>{
         contentContainer.replaceChildren();
-        renderAbout();  //used about page for now
+        renderMenu();  
     })
 }
 

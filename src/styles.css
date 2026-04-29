@@ -37,8 +37,8 @@ li:hover,
 
 /* HOME PAGE STYLING */
 hr{
-    width: 260px;
-    border: 2px solid black;
+    width: 380px;
+    border: 3px solid black;
     margin: 24px;
 }
 main{
@@ -46,6 +46,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 }
 .title-one,
 .title-two{
@@ -124,7 +125,6 @@ main{
   .about-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
   .about-desc{
@@ -132,3 +132,32 @@ main{
     width: 600px;
     text-align: center;
   }
+
+
+  /* MENU PAGE STYLING */
+  .menu-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-break{
+    margin-bottom: 40px;
+  }
+  .sub-break{
+    width: 200px;
+    border: 1px solid black;
+  }
+  .menu-item{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+  }
+#content{
+    min-height: 0;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+}
