@@ -1,7 +1,6 @@
 import "./styles.css"
-import { renderNav } from "./navbar.js";
-import { renderFooter } from "./footer.js";
 import { renderHome } from "./home.js";
+import { renderAbout } from "./about.js";
 
 function createHtmlElement(type, id, arrayClasses, content){
     const element = document.createElement(type);
@@ -20,24 +19,18 @@ const contentContainer = document.querySelector('#content');
 
 export { createHtmlElement, contentContainer };
 
-renderNav();
-renderHome();
-renderFooter();
+// Running the Page
+// renderHome();
 
-
-// EVENT LISTENERS
-// menu button 
-box1.addEventListener("click", ()=>{
-    contentContainer.replaceChildren();
-    contentContainer.appendChild(aboutContainer);//change to menu later
-})
-
+// NavBar BTNS
+const homeNav = document.querySelector('#home')
 homeNav.addEventListener("click", ()=>{
     contentContainer.replaceChildren();
-    contentContainer.appendChild(homeContainer);
+    renderHome();
 })
 
+const aboutNav = document.querySelector('#about')
 aboutNav.addEventListener("click", ()=>{
     contentContainer.replaceChildren();
-    contentContainer.appendChild(aboutContainer);
+    renderAbout();
 })
